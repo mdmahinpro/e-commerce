@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Products from "../components/home-page-UI/Products";
 import styles from "../styles/Home.module.css";
+import Products from "../components/home-page-UI/products/Products";
 
 export default function Home() {
   return (
