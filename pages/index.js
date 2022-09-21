@@ -6,7 +6,6 @@ export default function Home() {
     <div>
       <h1 className="text-center text-3xl">Welcome to Home</h1>
       <Products />
-      <ProductDetails />
     </div>
   );
 }
