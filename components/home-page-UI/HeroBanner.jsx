@@ -1,41 +1,32 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
+import HeadphoneBan from "../../public/assets/headphones_a_1.webp";
+import Button from "../general/Button";
 
 function HeroBanner() {
   return (
-    <div>
-      <section id="parent" className="flex justify-center">
-        <div
-          id="card"
-          className="bg-[#F02D34] mt-16 px-10 text-white flex flex-wrap justify-center lg:justify-between rounded-lg py-10 lg:py-0"
-        >
-          <div className="w-[80%] lg:w-[30%] flex flex-col justify-center items-center lg:items-start">
-            <p className="uppercase text-sm text-gray-200 font-light">
-              20% off
-            </p>
-            <p className="uppercase font-extrabold text-6xl mt-2">Fine</p>
-            <p className="uppercase font-extrabold text-6xl mb-2">smile</p>
-            <p className="uppercase text-sm">15 Nov - 7 Dec</p>
-          </div>
-          <div className="w-[80%] lg:w-[40%] flex justify-center">
-            <img
-              src="/assets/headphones_c_1.webp"
-              alt=""
-              className="w-full h-[100%] lg:h-[120%] lg:mt-[-80px]"
-            />
-          </div>
-          <div className="w-[80%] lg:w-[30%] flex flex-col justify-center items-center lg:items-start">
-            <p className="capitalize">best solo Air</p>
-            <p className="capitalize font-extrabold text-2xl lg:text-4xl mb-1 lg:mb-0">
-              Summer Sale
-            </p>
-            <p className="text-xs">
-              Company that is Grown from 270 t0 480 Employees From Last 12
-              Months
-            </p>
-          </div>
+    <div className="flex justify-between bg-slate-300 h-64 rounded-lg py-8 px-8">
+      <div>
+        <h4 className=" font-serif text-lg">Beats Solo</h4>
+        <h3 className="text-3xl font-bold  text-black">Wireless</h3>
+        <h1 className="text-7xl font-extrabold uppercase text-white">
+          Headphone
+        </h1>
+        <div>
+          <Button
+            extraStyle="bg-red-500 text-white my-6 hover:bg-blue-400 focus:ring-green-500"
+            text="Shop Wireless Headphone"
+          />
         </div>
-      </section>
+      </div>
+      <Image alt="Headphone IMG" src={HeadphoneBan} width={280} />
+      <span className=" w-48">
+        <p className=" font-mono">Description:</p>
+        <p className=" font-thin">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+          quibusdam debitis corrupti, asperiores dolorum optio
+        </p>
+      </span>
     </div>
   );
 }

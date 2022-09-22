@@ -1,5 +1,6 @@
 import React from "react";
 import HeroBanner from "./HeroBanner";
+import FooterBanner from "./FooterBanner";
 import Products from "./products/Products";
 
 function HomePage() {
@@ -7,6 +8,7 @@ function HomePage() {
     <div>
       <HeroBanner />
       <Products />
+      <FooterBanner />
     </div>
   );
 }
