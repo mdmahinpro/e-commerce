@@ -11,7 +11,7 @@ import Button from "../general/Button";
 
 function ProductDetails() {
   return (
-    <div className="md:flex w-full  ">
+    <div className="md:flex w-full  mt-10">
       <div className="w-2/4">
         <Image
           className="px-4 py-2 bg-gray-200 rounded-lg my-2 w-100%"

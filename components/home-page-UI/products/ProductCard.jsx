@@ -7,7 +7,7 @@ function ProductCard({ product }) {
   return (
     <div>
       <Link href="/products/headphone">
-        <div className="h-[200px] w-[200px]  rounded-lg bg-[#EBEBEB]">
+        <div className="h-[200px] w-[200px]  rounded-lg bg-[#EBEBEB] cursor-pointer">
           <img src={product.imgSrc} alt="" />
         </div>
       </Link>
