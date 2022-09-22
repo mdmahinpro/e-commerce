@@ -14,7 +14,7 @@ function ProductDetails() {
     <div className="md:flex w-full  ">
       <div className="w-2/4">
         <Image
-          className="px-4 py-2 bg-gray-200 rounded-lg my-2"
+          className="px-4 py-2 bg-gray-200 rounded-lg my-2 w-100%"
           src={headphone}
           alt="Picture of the author"
           width="350px"
@@ -23,7 +23,7 @@ function ProductDetails() {
 
         <p>Sub Image</p>
       </div>
-      <div className="w-3/4 space-y-4 ">
+      <div className="w-3/4 md:space-y-4 ">
         <h1 className="text-3xl font-semibold text-gray-600">
           boAt immortal 100D
         </h1>
