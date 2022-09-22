@@ -1,11 +1,10 @@
-import Products from "../components/home-page-UI/products/Products";
-import ProductDetails from "../components/product-page-ui/ProductDetails";
+import HomePage from "../components/home-page-UI";
 
 export default function Home() {
   return (
     <div>
       <h1 className="text-center text-3xl">Welcome to Home</h1>
-      <Products />
+      <HomePage />
     </div>
   );
 }
