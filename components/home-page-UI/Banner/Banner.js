@@ -1,15 +1,13 @@
-import Image from "next/image";
 import React from "react";
-import HeadphoneBan from "../../../public/assets/headphones_a_1.webp";
 import Button from "../../general/Button";
 
 function Banner() {
   return (
-    <div className="flex justify-between bg-slate-300 h-64 rounded-lg py-8 px-8">
-      <div>
+    <div className="md:flex justify-between  bg-slate-300 md:h-64 h-1/4 rounded-lg py-8 px-8">
+      <div className="relative">
         <h4 className=" font-serif text-lg">Beats Solo</h4>
         <h3 className="text-3xl font-bold  text-black">Wireless</h3>
-        <h1 className="text-7xl font-extrabold uppercase text-white">
+        <h1 className="text-4xl md:text-7xl font-extrabold uppercase text-white">
           Headphone
         </h1>
         <div>
@@ -18,15 +16,21 @@ function Banner() {
             text="Shop Wireless Headphone"
           />
         </div>
+        <span className="absolute left-0 top-0">
+          <img
+            src="/assets/headphones_a_4.webp"
+            alt="Headphone IMG"
+            className=" absolute "
+          />
+        </span>
       </div>
-      <Image alt="Headphone IMG" src={HeadphoneBan} width={280} />
-      <span className=" w-48">
-        <p className=" font-mono">Description:</p>
-        <p className=" font-thin">
+      <div className=" w-full  md:text-right my-4 md:my-8 overflow-hidden">
+        <p className=" font-sans">Description:</p>
+        <p className=" font-thin  ">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
           quibusdam debitis corrupti, asperiores dolorum optio
         </p>
-      </span>
+      </div>
     </div>
   );
 }
