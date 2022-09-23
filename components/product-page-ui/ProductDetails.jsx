@@ -8,23 +8,28 @@ import {
 } from "react-icons/ai";
 import headphone from "../../public/assets/headphones_a_1.webp";
 import Button from "../general/Button";
+import subProducts from "./subProducts";
 
 function ProductDetails() {
   return (
-    <div className="md:flex w-full  mt-10">
-      <div className="w-2/4">
+    <div className="md:flex justify-center items-center w-full  mt-10">
+      <div className="md:w-2/4  text-center">
         <Image
-          className="px-4 py-2 bg-gray-200 rounded-lg my-2 w-100%"
+          className="px-4 py-2  rounded-lg my-2 w-100%"
           src={headphone}
           alt="Picture of the author"
           width="350px"
           height="300px"
         />
-
-        <p>Sub Image</p>
+        <div className=" flex justify-center">
+          {subProducts.map((product) => (
+            <img className="w-28 h-16" src={product.imgSrc} alt="" />
+          ))}
+        </div>
       </div>
-      <div className="w-3/4 md:space-y-4 ">
-        <h1 className="text-3xl font-semibold text-gray-600">
+
+      <div className="md:w-3/4 space-y-4 mx-8">
+        <h1 className="text-3xl font-semibold text-gray-600 md:mt-0 mt-8">
           boAt immortal 100D
         </h1>
         <p className="text-red-600 flex">
@@ -45,10 +50,11 @@ function ProductDetails() {
           rerum repudiandae in eveniet sape, pariatur commodi voluptas labore
           rerum provident fuga.
         </p>
+
         <h1 className="text-2xl text-indigo-600 font-semibold">$50</h1>
         <span className="flex ">
           <p className="font-semibold ">Quantity:</p>
-          <span className="flex text-blue-500 font-semibold items-center">
+          <span className="flex mx-2 text-blue-500 font-semibold items-center">
             <AiOutlineLeftCircle size={20} />
             01
             <AiOutlineRightCircle size={20} />
