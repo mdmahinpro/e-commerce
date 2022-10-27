@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 import productData from "./productData";
 
 function Products() {
-  console.log("productData:", productData);
+  // console.log("productData:", productData);
   return (
     <div className="my-10">
       <h2 className="text-center text-primary text-3xl font-bold capitalize">

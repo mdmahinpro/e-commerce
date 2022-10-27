@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 function ProductCard({ product }) {
-  console.log("product", product);
+  // console.log("product", product);
   return (
     <div>
       <Link href="/products/headphone">

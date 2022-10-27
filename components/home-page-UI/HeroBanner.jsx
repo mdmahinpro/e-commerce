@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Button from "../general/Button";
+import { client } from "../../lib/client";
 
-function HeroBanner() {
+function HeroBanner({ bannerData }) {
+  console.log("bannerData", bannerData);
   return (
     <div className="mt-16 md:flex justify-center md:justify-between bg-slate-300 rounded-lg p-8">
       <div className="flex flex-col items-center md:items-start">
@@ -35,5 +37,17 @@ function HeroBanner() {
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const query = '*[_type === "product"]';
+  const products = await client.fetch(query);
+
+  const bannerQuery = '*[_type === "banner"]';
+  const bannerData = await client.fetch(bannerQuery);
+
+  return {
+    props: { products, bannerData },
+  };
+};
 
 export default HeroBanner;
